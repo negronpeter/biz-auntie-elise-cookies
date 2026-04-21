@@ -78,9 +78,19 @@
             color: var(--red);
             line-height: 1;
             letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .nav__logo span { color: var(--black); }
+        .nav__logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .nav__logo-text span { color: var(--black); }
 
         .nav__links {
             display: flex;
@@ -241,9 +251,9 @@
             width: 100%;
             max-width: 420px;
             height: auto;
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
+            border-radius: 50%;
             animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 32px rgba(0,0,0,0.22));
         }
 
         @keyframes float {
@@ -699,7 +709,8 @@
         <nav class="nav" id="site-nav">
             <div class="nav__inner">
                 <a href="/" class="nav__logo" aria-label="Auntie Elise's Delicious Cookies">
-                    <span>AUNTIE ELISE'S</span> COOKIES
+                    <img src="logo.png" alt="Auntie Elise's Cookies" class="nav__logo-img">
+                    <span class="nav__logo-text"><span>AUNTIE ELISE'S</span> COOKIES</span>
                 </a>
                 <ul class="nav__links" role="list">
                     <li><a href="#cookies" class="nav__link">Our Cookies</a></li>
@@ -740,7 +751,7 @@
                     </div>
                 </div>
                 <div class="hero__image">
-                    <img class="cookie-hero-img" src="cookies-hero.jpg" alt="Auntie Elise's Red Velvet, Oreo, and Chocolate Chip Oatmeal cookies with white icing drizzle">
+                    <img class="cookie-hero-img" src="logo.png" alt="Auntie Elise's Cookies logo">
                 </div>
             </div>
         </section>
