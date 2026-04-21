@@ -78,9 +78,20 @@
             color: var(--red);
             line-height: 1;
             letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .nav__logo span { color: var(--black); }
+        .nav__logo-img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            flex-shrink: 0;
+            mix-blend-mode: multiply;
+        }
+
+        .nav__logo-text span { color: var(--black); }
 
         .nav__links {
             display: flex;
@@ -239,16 +250,11 @@
 
         .cookie-hero-img {
             width: 100%;
-            max-width: 460px;
-            height: 420px;
-            background: linear-gradient(135deg, var(--pink-dark) 0%, var(--pink-mid) 100%);
-            border-radius: 50% 40% 50% 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            box-shadow: var(--shadow-lg);
+            max-width: 420px;
+            height: auto;
+            border-radius: 50%;
             animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 32px rgba(0,0,0,0.22));
         }
 
         @keyframes float {
@@ -339,6 +345,8 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
 
         .cookie-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
@@ -346,20 +354,17 @@
         .cookie-card__img {
             width: 100%;
             height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            background: var(--pink);
+            object-fit: cover;
+            display: block;
+            flex-shrink: 0;
         }
 
-        .cookie-card__img--rv  { background: linear-gradient(135deg, #8B0000, #CC1C22); }
-        .cookie-card__img--cc  { background: linear-gradient(135deg, #5C3317, #8B6347); }
-        .cookie-card__img--or  { background: linear-gradient(135deg, #1A1A1A, #3D3D3D); }
-        .cookie-card__img--pb  { background: linear-gradient(135deg, #7B4F1E, #C8860A); }
-        .cookie-card__img--more { background: linear-gradient(135deg, var(--pink-mid), var(--pink-dark)); }
-
-        .cookie-card__body { padding: 1.25rem; }
+        .cookie-card__body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
 
         .cookie-card__tag {
             font-family: var(--font-display);
@@ -387,6 +392,7 @@
             color: var(--gray);
             line-height: 1.5;
             margin-bottom: 1rem;
+            flex: 1;
         }
 
         .cookie-card__cta {
@@ -419,13 +425,8 @@
 
         .about__img {
             width: 100%;
-            height: 460px;
-            background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+            height: auto;
             border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 7rem;
             box-shadow: var(--shadow-lg);
         }
 
@@ -709,7 +710,8 @@
         <nav class="nav" id="site-nav">
             <div class="nav__inner">
                 <a href="/" class="nav__logo" aria-label="Auntie Elise's Delicious Cookies">
-                    <span>AUNTIE ELISE'S</span> COOKIES
+                    <img src="logo.png" alt="Auntie Elise's Cookies" class="nav__logo-img">
+                    <span class="nav__logo-text"><span>AUNTIE ELISE'S</span> COOKIES</span>
                 </a>
                 <ul class="nav__links" role="list">
                     <li><a href="#cookies" class="nav__link">Our Cookies</a></li>
@@ -743,14 +745,14 @@
                         <span>COOKIES.</span><br>
                         DELIVERED.
                     </h1>
-                    <p class="hero__sub">Fresh-baked, made-from-scratch cookies delivered straight to your door. Local orders only. Baked with love by Auntie Elise.</p>
+                    <p class="hero__sub">The kind of cookie that makes you close your eyes on the first bite. Made from scratch — real butter, real chocolate, Auntie Elise's own recipes — baked fresh and delivered to your door. Local orders only.</p>
                     <div class="hero__actions">
                         <a href="#cookies" class="btn btn--primary">See Our Cookies</a>
                         <a href="#order" class="btn btn--outline">Place an Order</a>
                     </div>
                 </div>
-                <div class="hero__image" aria-hidden="true">
-                    <div class="cookie-hero-img">🍪</div>
+                <div class="hero__image">
+                    <img class="cookie-hero-img" src="logo.png" alt="Auntie Elise's Cookies logo">
                 </div>
             </div>
         </section>
@@ -765,7 +767,7 @@
                 <div class="cookie-grid" role="list">
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--rv" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/16974019/pexels-photo-16974019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Red velvet cookies with cream filling" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Fan Favorite</div>
                             <div class="cookie-card__name">Red Velvet</div>
@@ -775,7 +777,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--cc" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/13184915/pexels-photo-13184915.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Homemade oatmeal chocolate chip cookies" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Classic</div>
                             <div class="cookie-card__name">Chocolate Chip Oatmeal</div>
@@ -785,7 +787,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--or" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/13143739/pexels-photo-13143739.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Cookies topped with Oreo crumble" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Cookies &amp; Cream</div>
                             <div class="cookie-card__name">Oreo Cookie</div>
@@ -795,7 +797,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--pb" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/8750738/pexels-photo-8750738.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Peanut butter cookie topped with whole peanuts" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Sweet &amp; Salty</div>
                             <div class="cookie-card__name">Peanut Butter Chocolate Chip</div>
@@ -805,7 +807,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--more" aria-hidden="true">✨</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/16974008/pexels-photo-16974008.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Assorted homemade cookies on pink background" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Coming Soon</div>
                             <div class="cookie-card__name">More Flavors</div>
@@ -822,7 +824,7 @@
         <section id="about" class="about" aria-labelledby="about-title">
             <div class="section-inner">
                 <div class="about__grid">
-                    <div class="about__img" aria-hidden="true">👩‍🍳</div>
+                    <img class="about__img" src="cookies-hero.jpg" alt="Auntie Elise's homemade cookies">
                     <div class="about__text">
                         <p class="section-label">Made with Love</p>
                         <h2 id="about-title" class="section-title"><span>REAL</span> INGREDIENTS.<br>NO SHORTCUTS.</h2>
