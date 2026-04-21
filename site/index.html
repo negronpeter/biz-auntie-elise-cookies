@@ -334,6 +334,8 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
 
         .cookie-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
@@ -343,9 +345,15 @@
             height: 200px;
             object-fit: cover;
             display: block;
+            flex-shrink: 0;
         }
 
-        .cookie-card__body { padding: 1.25rem; }
+        .cookie-card__body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
 
         .cookie-card__tag {
             font-family: var(--font-display);
@@ -373,6 +381,7 @@
             color: var(--gray);
             line-height: 1.5;
             margin-bottom: 1rem;
+            flex: 1;
         }
 
         .cookie-card__cta {
@@ -724,7 +733,7 @@
                         <span>COOKIES.</span><br>
                         DELIVERED.
                     </h1>
-                    <p class="hero__sub">Fresh-baked, made-from-scratch cookies delivered straight to your door. Local orders only. Baked with love by Auntie Elise.</p>
+                    <p class="hero__sub">The kind of cookie that makes you close your eyes on the first bite. Made from scratch — real butter, real chocolate, Auntie Elise's own recipes — baked fresh and delivered to your door. Local orders only.</p>
                     <div class="hero__actions">
                         <a href="#cookies" class="btn btn--primary">See Our Cookies</a>
                         <a href="#order" class="btn btn--outline">Place an Order</a>
