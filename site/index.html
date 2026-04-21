@@ -346,18 +346,9 @@
         .cookie-card__img {
             width: 100%;
             height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            background: var(--pink);
+            object-fit: cover;
+            display: block;
         }
-
-        .cookie-card__img--rv  { background: linear-gradient(135deg, #8B0000, #CC1C22); }
-        .cookie-card__img--cc  { background: linear-gradient(135deg, #5C3317, #8B6347); }
-        .cookie-card__img--or  { background: linear-gradient(135deg, #1A1A1A, #3D3D3D); }
-        .cookie-card__img--pb  { background: linear-gradient(135deg, #7B4F1E, #C8860A); }
-        .cookie-card__img--more { background: linear-gradient(135deg, var(--pink-mid), var(--pink-dark)); }
 
         .cookie-card__body { padding: 1.25rem; }
 
@@ -765,7 +756,7 @@
                 <div class="cookie-grid" role="list">
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--rv" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/16974019/pexels-photo-16974019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Red velvet cookies with cream filling" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Fan Favorite</div>
                             <div class="cookie-card__name">Red Velvet</div>
@@ -775,7 +766,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--cc" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/13184915/pexels-photo-13184915.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Homemade oatmeal chocolate chip cookies" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Classic</div>
                             <div class="cookie-card__name">Chocolate Chip Oatmeal</div>
@@ -785,7 +776,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--or" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/13143739/pexels-photo-13143739.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Cookies topped with Oreo crumble" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Cookies &amp; Cream</div>
                             <div class="cookie-card__name">Oreo Cookie</div>
@@ -795,7 +786,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--pb" aria-hidden="true">🍪</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/8750738/pexels-photo-8750738.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Peanut butter cookie topped with whole peanuts" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Sweet &amp; Salty</div>
                             <div class="cookie-card__name">Peanut Butter Chocolate Chip</div>
@@ -805,7 +796,7 @@
                     </article>
 
                     <article class="cookie-card" role="listitem">
-                        <div class="cookie-card__img cookie-card__img--more" aria-hidden="true">✨</div>
+                        <img class="cookie-card__img" src="https://images.pexels.com/photos/16974008/pexels-photo-16974008.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Assorted homemade cookies on pink background" loading="lazy">
                         <div class="cookie-card__body">
                             <div class="cookie-card__tag">Coming Soon</div>
                             <div class="cookie-card__name">More Flavors</div>
